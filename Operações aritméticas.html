@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+body{
+text-align: center;
+background: rgb(255, 255, 255);
+color: rgb(3, 3, 3);
+font-family: Arial, sans-serif;
+font-size: 20px;
+
+}
+
+    </style>
+    </head>
+    <body>
+        <h1> Operações aritméticas básicas!</h1>
+        <p>Digite seu dados:</p>
+<script>
+    let numero1 = prompt('Digite um número:')
+    let numero2 = prompt('Digite o segundo número:')
+
+            let soma = parseFloat(numero1) + parseFloat(numero2)
+            let subtração = parseFloat(numero1) - parseFloat(numero2)
+            let divisão = parseFloat(numero1) / parseFloat(numero2)
+            let multiplicação = parseFloat(numero1) * parseFloat(numero2)
+
+            document.write(`O resultado da soma dos números ${numero1} e ${numero2} é: ${soma} `+ "<br>")
+            document.write(`O resultado da subtração dos números ${numero1} e ${numero2} é: ${subtração}` + "<br>")
+            document.write(`O resultado da Divisão dos números ${numero1} e ${numero2} é: ${divisão}` + "<br>")
+            document.write(`O resultado da+ multiplicação dos números ${numero1} e ${numero2} é: ${multiplicação}` + "<br>")
+
+    </script>
+        </body>
+            </html>
+
+
+
