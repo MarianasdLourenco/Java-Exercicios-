@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+body{
+text-align: center;
+background: rgb(186, 141, 238);
+color: rgb(3, 3, 3);
+font-family: Arial, sans-serif;
+font-size: 20px;
+
+}
+</style>
+    </head>
+    <body>
+
+  <h1>Exemplo 03</h1>
+  <p>Calcula o valor com desconto a partir do preço e do percentual de desconto.</p>
+
+  <form id="form">
+    <input id="field1" type="number" placeholder="Preço base">
+    <input id="field2" type="number" placeholder="Percentual">
+    <button>Calcular</button>
+  </form>
+
+  <div id="result"></div>
+
+  <script>
+    function onSubmit(event) {
+      event.preventDefault()
+
+      let preço = parseFloat(field1.value)
+      let desconto = parseFloat(field2.value)
+
+      let quantidadeDiscontada = preço * desconto / 100
+      let preçofinal = preço - quantidadeDiscontada
+
+      result.innerHTML = `
+        <ul>
+          <li>Preço base: <b>${preço}</b>.</li>
+          <li>Valor do desconto: <b>${quantidadeDiscontada}</b>.</li>
+          <li>Preço final: <b>${preçofinal}</b>.</li>
+        </ul>
+      `
+    }
+
+    form.addEventListener('submit', onSubmit)
+  </script>
+
+</html>
